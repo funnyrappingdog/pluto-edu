@@ -1,0 +1,744 @@
+
+:root{
+--core-color:rgb(54, 16, 51);
+--main-background-color:rgb(132, 19, 122);
+--border-color:rgb(255, 215, 0);
+--text-color:white;
+}
+
+
+@font-face{
+    font-family: "Super_Fortress";
+    src: url('images/Super Fortress.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1{
+    color: var(--text-color);
+   text-align: center;
+    font-family: "Super_Fortress", sans-serif;
+}
+body{
+    background: linear-gradient(150deg,
+    rgb(173, 148, 205) 0%,
+     rgb(112, 88, 172) 70%,
+      rgb(102, 102, 102) 100%);
+
+    animation: drift 12s ease-in-out alternate forwards;
+    background-size: 300% 300%;
+
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.2), transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+@keyframes drift{
+
+    0%{background-position: 0% 50%;}
+    100%{background-position: 100% 50%;}
+
+}
+h2{
+    color: var(--text-color);
+    font-family: "Super_Fortress", sans-serif;
+    text-align: center;
+}
+h3{
+    color: var(--text-color);
+    font-family: "Super_Fortress", sans-serif;
+    text-align: center;
+}
+h4{
+    color: var(--text-color);
+    font-family: "Super_Fortress", sans-serif;
+    text-align: center;
+}
+.library_title{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+
+}
+
+
+
+.main_theme_image{
+    transform: rotate(-5deg);
+
+
+    height: 450px; 
+    overflow: hidden;
+    background-size: cover;
+    background-color: var(--main-background-color);
+    border: 6px dashed;
+    border-color: var(--border-color);
+    border-radius: 25px;
+    transition: 0.4;
+    cursor: pointer;
+}
+.main_theme_image:hover{
+    scale: 1.1;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+}
+.log{
+   display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-grow: 1;
+
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+}
+
+
+.che{
+display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+}
+.che:hover{
+    scale: 0.9;
+}
+
+
+
+.menu_container{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+    
+}
+
+.img_card{
+    position: relative;
+    background-image: image-set("images/web_icons/middle_bg.webp");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.buttons{
+    margin-left: 400px;
+    gap: 200px;
+    
+}
+.brokie{
+   display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57); 
+}
+.brokie:hover{
+    scale: 1.2;
+}
+
+.popular_games{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+}
+.popular_game_images{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/*button junk lol*/
+
+
+
+.home{
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    border: none;
+    background-image: url("images/web_icons/home_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    transition: 4;
+    cursor: pointer;
+}
+.home:hover{
+    scale: 1.2;
+}
+.games{
+width: 100px;
+    height: 100px;
+    padding: 0;
+    border: none;
+    background-image: url("images/web_icons/games_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    transition: 4;
+    cursor: pointer;
+}
+.games:hover{
+    scale: 1.2;
+    
+}
+.apps{
+width: 100px;
+    height: 100px;
+    padding: 0;
+    border: none;
+    background-image: url("images/web_icons/apps_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    transition: 4;
+    cursor: pointer;
+}
+.apps:hover{
+    scale: 1.2;
+}
+.extras{
+width: 100px;
+    height: 100px;
+    padding: 0;
+    border: none;
+    background-image: url("images/web_icons/more_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    transition: 4;
+    cursor: pointer;
+
+}
+.extras:hover{
+    scale: 1.2;
+}
+
+/*your css document, its so long daddy*/
+
+.game_library{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+}
+
+.Fn{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;       
+    border-radius: 75px;     
+    overflow: hidden;       
+    cursor: pointer;
+    border: 1px solid rgba(172, 172, 172, 0.57);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.Fn:hover{
+    scale: 1.2;
+}
+
+.selected_game_1{
+object-fit: cover;       
+    border-radius: 75px;     
+    overflow: hidden;       
+    cursor: pointer;
+    border: 5px solid rgba(172, 172, 172, 0.57);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    width: 300px;
+}
+.selected_game_2{
+object-fit: cover;       
+    border-radius: 75px;     
+    overflow: hidden;       
+    cursor: pointer;
+    border: 5px solid rgba(172, 172, 172, 0.57);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    width: 300px;
+}
+.selected_game_3{
+object-fit: cover;       
+    border-radius: 75px;     
+    overflow: hidden;       
+    cursor: pointer;
+    border: 5px solid rgba(172, 172, 172, 0.57);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    width: 300px;
+}
+.selected_game_1:hover{
+  scale: 1.2;  
+}
+.selected_game_2:hover{
+  scale: 1.2;  
+}
+.selected_game_3:hover{
+  scale: 1.2;  
+}
+
+
+
+
+
+
+
+/*male lonlieness epidemic, sassy male apocolapse, sigma*/
+.extra_container{
+display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+}
+
+/*diddy boy come to north rhode island and find out*/
+
+.app_library{
+display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+}
+
+.sugestions{
+   display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    width: 200px;
+    height: 150px; 
+}
+.sugestions:hover{
+    scale: 1.2;
+}
+
+.green_nga{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;       
+    border-radius: 75px;     
+    overflow: hidden;       
+    cursor: pointer;
+    border: 1px solid rgba(172, 172, 172, 0.57);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.green_nga:hover{
+    scale: 1.2;
+}
+
+.game_container{
+ width: 900px;       /* width of your game */
+  height: 700px;      /* height of your game */
+  background: black;
+  margin: 50px auto;  /* centers container horizontally */
+  border: 2px dashed --border-color; /* optional border */
+  border-radius: 10px;      /* optional rounded corners */
+  box-shadow: 0 0 20px rgba(0,0,0,0.5); /* optional shadow */
+  
+}
+.game_frame{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ✅ TBOI-specific responsive container - DOES NOT affect other games */
+.game_container.tboi {
+  width: min(100%, 1000px);   /* never grow wider than game's native width */
+  aspect-ratio: 1000 / 572;   /* preserve native aspect ratio */
+  max-height: calc(100vh - 180px); /* keep it within viewport height */
+  margin: 50px auto; /* same centering as default */
+  background: black;
+}
+
+/* ensure the iframe fills the TBOI container */
+.game_container.tboi .game_frame {
+  width:100%;
+  height:100%;
+}
+
+@media (max-width: 420px) {
+  .game_container.tboi {
+    max-height: calc(100vh - 120px);
+  }
+}
+
+/* ✅ Basketball Stars — page-specific sizing (won't affect other games) */
+.game_container.basketball {
+  width: min(100%, 1100px);        /* limit expansion on large screens */
+  aspect-ratio: 16 / 9;            /* common game aspect ratio */
+  max-height: calc(100vh - 160px); /* keep within viewport */
+  margin: 50px auto;
+  background: black;
+}
+
+.game_container.basketball .game_frame {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .game_container.basketball { max-height: calc(100vh - 120px); }
+}
+
+.game_description{
+    align-self: center;
+    justify-content: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    background: rgba(172, 172, 172, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(172, 172, 172, 0.57);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*bubbles code from mark bowley on codepen*/
+/*https://codepen.io/Mark_Bowley/pen/PozwyP*/
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@-moz-keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@-webkit-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@-moz-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+    -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: -5%;
+	top: 5%;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+.x2 {
+    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 5%;
+	top: 80%;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x3 {
+    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 10%;
+	top: 40%;
+	
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	transform: scale(0.7);
+}
+
+.x4 {
+    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	
+	left: 20%;
+	top: 0;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x5 {
+    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 30%;
+	top: 50%;
+	
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.x6 {
+    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 50%;
+	top: 0;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.x7 {
+    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 65%;
+	top: 70%;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x8 {
+    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	
+	left: 80%;
+	top: 10%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x9 {
+    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 90%;
+	top: 50%;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+.x10 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 80%;
+	top: 80%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+/* OBJECTS */
+
+.bubble {
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	
+    height: 200px;
+	position: fixed;
+	width: 200px;
+    z-index: -1;
+}
+
+.bubble:after {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	
+	content: "";
+    height: 180px;
+	left: 10px;
+	position: absolute;
+	width: 180px;
+    z-index: -1;
+}
